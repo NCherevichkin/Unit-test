@@ -18,8 +18,22 @@ namespace simple_shapes
 
 	void box::InData(ifstream &ifst)
 	{
-		ifst >> x >> y >> z;
-		shape::InData(ifst);
+		try
+		{ 
+			ifst >> x >> y >> z;
+			
+			if (x <= 0 || y <= 0 || z <= 0)
+				throw exception("Стороны паралелепипеда должны быть положительными! Работа программы прекращена.");
+			shape::InData(ifst);
+		}
+		catch (exception& except)
+		{
+			cout << except.what() << endl;
+			system("pause");
+			exit(EXIT_FAILURE);
+		}
+		
+		
 	}
 
 	string box::ToString()

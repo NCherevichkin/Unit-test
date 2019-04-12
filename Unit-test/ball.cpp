@@ -4,8 +4,21 @@ namespace simple_shapes
 {
 	void ball::InData(ifstream &ifst)
 	{
-		ifst >> radius;
-		shape::InData(ifst);
+		try
+		{
+			ifst >> radius;
+			
+			if (radius <= 0)
+				throw exception("Радиус шара должен быть положительным! Работа программы прекращена.");
+			shape::InData(ifst);
+		}
+		catch (exception& except)
+		{
+			cout << except.what() << endl;
+			system("pause");
+			exit(EXIT_FAILURE);
+		}
+		
 	}
 
 	void ball::Out(ofstream &ofst)

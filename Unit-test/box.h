@@ -1,6 +1,6 @@
 #ifndef BOX_H
 #define BOX_H
-
+#include <iostream>
 #include "shape.h"
 
 namespace simple_shapes

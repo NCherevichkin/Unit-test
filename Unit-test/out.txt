@@ -1,8 +1,0 @@
-Container contents 3 elements.
-0: It is Ball: r = 2, melting point = 200°C, V = 33.4933
-1: It is Box: x = 2, y = 3, z = 4, melting point = 100°C, V = 24
-2: It is Tetrahedron: r = 3, melting point = 300°C, V = 3.18198
-Only balls.
-0: It is Ball: r = 2, melting point = 200°C, V = 33.4933
-1: 
-2: 
