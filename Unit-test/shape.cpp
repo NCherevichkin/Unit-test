@@ -17,36 +17,25 @@ namespace simple_shapes
 
 	shape* shape::In(ifstream &ifst)
 	{
-
 		shape *sp;
 		int k;
-
-		try
+		ifst >> k;
+		switch (k)
 		{
-			ifst >> k;
-			switch (k)
-			{
-			case 1:
-				sp = new box;
-				break;
-			case 2:
-				sp = new ball;
-				break;
-			case 3:
-				sp = new tetrahedron;
-				break;
-			default:
-				throw exception("Во входном файле присутствует неопознанная фигура! Работа программы прекращена.");
-			}
-			sp->InData(ifst);
-			return sp;
+		case 1:
+			sp = new box;
+			break;
+		case 2:
+			sp = new ball;
+			break;
+		case 3:
+			sp = new tetrahedron;
+			break;
+		default:
+			return 0;
 		}
-		catch (exception& except)
-		{
-			cout << except.what() << endl;
-			system("pause");
-			exit(EXIT_FAILURE);
-		}
+		sp->InData(ifst);
+		return sp;
 	}
 
 	bool shape::Compare(shape &other)

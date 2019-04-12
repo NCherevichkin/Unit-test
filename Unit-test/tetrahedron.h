@@ -1,6 +1,6 @@
 #ifndef TETRAHEDRON_H
 #define TETRAHEDRON_H
-#include <iostream>
+
 #include "shape.h"
 
 namespace simple_shapes

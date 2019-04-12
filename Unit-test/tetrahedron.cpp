@@ -4,21 +4,8 @@ namespace simple_shapes
 {
 	void tetrahedron::InData(ifstream &ifst)
 	{
-		try
-		{
-			ifst >> a;
-			
-			if (a <= 0)
-				throw exception("Стороны тетраэдра должны быть положительными! Работа программы прекращена.");
-			shape::InData(ifst);
-		}
-		catch (exception& except)
-		{
-			cout << except.what() << endl;
-			system("pause");
-			exit(EXIT_FAILURE);
-		}
-		
+		ifst >> a;
+		shape::InData(ifst);
 	}
 
 	void tetrahedron::Out(ofstream &ofst)

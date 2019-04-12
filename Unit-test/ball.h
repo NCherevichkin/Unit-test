@@ -1,6 +1,6 @@
 #ifndef BALL_H
 #define BALL_H
-#include <iostream>
+
 #include "shape.h"
 
 namespace simple_shapes
